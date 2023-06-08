@@ -1,3 +1,5 @@
+//use this readme's markup as a basis C:\Users\Orion\Desktop\class-repo-activities\week5\09-NodeJS\01-Activities\06-Stu_Let-Const\README.md
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -16,5 +18,5 @@ function generateMarkdown(data) {
 
 `;
 }
-
+// module.exports is an object we use to store variables or methods
 module.exports = generateMarkdown;

@@ -39,7 +39,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  console.log(generateMarkdown({ title: "poopie" }));
+  console.log(generateMarkdown({ title: "test" }));
   //https://www.npmjs.com/package/inquirer/v/8.2.4#user-content-question
   inquirer
     .prompt([
@@ -54,19 +54,29 @@ function init() {
         name: "readMeDescription",
       },
       {
-        type: "confirm",
-        message: "Do you have installation steps for your app?",
-        name: "useInstallation",
-      },
-      {
         type: "input",
         message: "What are your app's installation instructions?",
         name: "readMeInstallation",
-        when: (response) => response.useInstallation,
+      },
+      {
+        type: "input",
+        message: "Describe how someone can use your app.",
+        name: "readMeUsage",
+      },
+      {
+        type: "input",
+        message: "What are your app's contribution guidelines?",
+        name: "readMeContributing",
+      },
+      {
+        type: "input",
+        message: "What are your app's test instructions?",
+        name: "readMeTesting",
       },
     ])
     .then((response) => {
-      //console.log(response);
+      console.log(response);
+      console.log(response.readMeInstallation);
     })
     .catch((error) => {
       //

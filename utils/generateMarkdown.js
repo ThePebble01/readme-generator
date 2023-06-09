@@ -15,9 +15,9 @@ function renderLicenseBadge(license) {
   var licenseBadgeResultTemplate = "";
   var licenseLink = renderLicenseLink(license);
   if (licenseLink != "" && badgeByLicense.has(license)) {
-    licenseBadgeResultTemplate = `[![License](${licenseLink})](${badgeByLicense.get(
+    licenseBadgeResultTemplate = `[![License](${badgeByLicense.get(
       license
-    )})`;
+    )})](${licenseLink})`;
   } else {
     licenseBadgeResultTemplate = "";
   }

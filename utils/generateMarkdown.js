@@ -14,7 +14,7 @@ const linkByLicense = new Map([
 function renderLicenseBadge(license) {
   var licenseBadgeResultTemplate = "";
   var licenseLink = renderLicenseLink(license);
-  if (licenseLink != "" && badgeByLicense.has(license)) {
+  if (licenseLink && badgeByLicense.has(license)) {
     licenseBadgeResultTemplate = `[![License](${badgeByLicense.get(
       license
     )})](${licenseLink})`;
@@ -25,7 +25,7 @@ function renderLicenseBadge(license) {
 }
 
 function renderLicenseLink(license) {
-  return linkByLicense.has(license) ? linkByLicense.get(license) : "";
+  return linkByLicense.get(license);
 }
 
 function renderLicenseSection(license) {
@@ -69,7 +69,8 @@ function generateMarkdown(data) {
   Reach out to me via Github: [${data.githubUsername}](https://github.com/${
     data.githubUsername
   })
-  \nOr contact me via email: ${data.email}
+  \n
+  Or contact me via email: ${data.email}
 
   ${
     data.license != "None"

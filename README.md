@@ -1,46 +1,52 @@
-# TEST
+# TEST TITLE
 
-  [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
   
   ## Description
 
   <p align="center">
-    This app will generate a readme for the developer because typiing was too easy!  Also having a simple template Readme.md on their machine is a little too caveman for some folks!  Uga Booga
+    DESCRIPTION
   </p>
 
   ## Table of Contents
 
-  
+  - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
-  
+  - [Tests](#tests)
   - [Questions](#questions)
   - [License](#license)
 
-  
+  ## Installation
+
+ 1) Try hard, 2) Do less 
+
 
 
   ## Usage
 
-  No one should use this.  Save a fucking template to your machine.
+  CAREFULLY
 
   ## Contributing
 
- Do not contribute 
+ Hit me up on that github 
 
 
 
-  
+  ## Tests
+
+ Run it 
+
 
 
   ## Questions
 
   Reach out to me via Github: [ThePebble01](https://github.com/ThePebble01)
   
-Or contact me via email: jahn.gordazz@gmail.com
+Or contact me via email: test@test.est
 
   ## License
 
-This application is covered under the MIT license. 
+This application is covered under the Eclipse license. 
 For more information, click the badge at the top of the README.
 

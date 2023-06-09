@@ -15,7 +15,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "If your app has installation instructions, please enter them.",
+    message:
+      "If your app has installation instructions, please enter them.  If there are none, hit enter.",
     name: "installation",
   },
   {
@@ -25,12 +26,14 @@ const questions = [
   },
   {
     type: "input",
-    message: "If your app has contribution guidelines, please enter them.",
+    message:
+      "If your app has contribution guidelines, please enter them.  If there are none, hit enter.",
     name: "contributing",
   },
   {
     type: "input",
-    message: "If your app has test instructions, please enter them.",
+    message:
+      "If your app has test instructions, please enter them.  If there are none, hit enter.",
     name: "testing",
   },
   {
@@ -53,15 +56,21 @@ const questions = [
 
 function writeToFile(fileName, data) {
   var markdownContent = generateMarkdown(data);
-  fs.writeFile(fileName, markdownContent, (error) => console.log(error));
+  fs.writeFile(fileName, markdownContent, logWriteFileResult);
 }
-
+function logWriteFileResult(result, error) {
+  result
+    ? console.log(result)
+    : error
+    ? console.log(error)
+    : console.log("Something unexpected occured!  Reach out to the developer.");
+}
 function init() {
   inquirer
     .prompt(questions)
     .then((response) => {
-      console.log(response);
       writeToFile("README.md", response);
+      console.log("A README has been generated in the project!");
     })
     .catch((error) => {
       console.log("A problem occurred!");

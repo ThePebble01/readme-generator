@@ -59,11 +59,11 @@ function writeToFile(fileName, data) {
   fs.writeFile(fileName, markdownContent, logWriteFileResult);
 }
 function logWriteFileResult(result, error) {
-  result
-    ? console.log(result)
-    : error
-    ? console.log(error)
-    : console.log("Something unexpected occured!  Reach out to the developer.");
+  if (result) {
+    console.log(result);
+  } else if (error) {
+    console.log(error);
+  }
 }
 function init() {
   inquirer
